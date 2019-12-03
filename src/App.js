@@ -59,19 +59,26 @@ addTodo = (item) => {
 // 
 todoCompleted = (item) => {
 
- const newTodos = [...this.state.todos];
+//  const newTodos = [...this.state.todos];
 
- 
-//  console.log('items', items);
+this.setState({
+  todos: this.state.todos.map(each => {
+    if (each.id === item.id) {
+    return {...each, completed: !each.completed}
+  } else {
+    return each }
+  }
+  )
 
+})
 
-     newTodos.forEach((cur) => {
-      if (cur.id === item.id && !item.completed) cur.completed = true
-      else cur.completed = false
-  })
+//      newTodos.forEach((cur) => {
+//       if (cur.id === item.id && !item.completed) cur.completed = true
+//       else cur.completed = false
+//   })
 
-
-  this.setState({todos: newTodos});
+console.log('todos', this.state.todos);
+  // this.setState({todos: newTodos});
 }
  
  
