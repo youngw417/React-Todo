@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Todo({todo, completedItems}) {
+function Todo({todo, todoCompleted}) {
     
     const handleClick = ()=> {
-        completedItems(todo);
+        todoCompleted(todo);
     
        
 
@@ -12,7 +12,7 @@ function Todo({todo, completedItems}) {
     return (
         <div>
           <p onClick = {handleClick} className ={todo.completed && 'completed' }>
-              {todo.task}
+              {todo.task} {':'} {Date(todo.id).toString().substring(0,15)}
          </p>  
         </div>
     )

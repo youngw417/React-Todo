@@ -3,21 +3,21 @@
 
 import Todo from './Todo';
 
-import React, {useState, useEffect} from 'react'
+import React from 'react';
 
 function TodoList({todos, todoCompleted}) {
 
     // const [myCom, setMycom] = useState();
 
-    const completedItems = (another) => {
+    // const completedItems = (another) => {
        
-        // setMycom(another)
+    //     // setMycom(another)
 
-        todoCompleted(another)
+    //     todoCompleted(another)
        
         
         
-    }
+    // }
     
  
 //     useEffect(()=> {
@@ -32,7 +32,7 @@ function TodoList({todos, todoCompleted}) {
             <h3 style={{borderBottom:'2px solid black', width: '60%', marginLeft: '6rem' }}>My current todos....</h3>
             {
                 todos.map(todo => (
-                    <Todo key = {todo.id} todo={todo}  completedItems ={completedItems}/>
+                    <Todo key = {todo.id} todo={todo}  todoCompleted ={todoCompleted}/>
                 )
                     )
             }

@@ -42,6 +42,7 @@ class App extends React.Component {
 
 
 addTodo = (item) => {
+  if (item) {
   const newItem = {
     task: item,
     id: Date.now(),
@@ -50,7 +51,7 @@ addTodo = (item) => {
  this.setState({
    todos: [...this.state.todos, newItem]
  });
-
+  }
 }
 
 
