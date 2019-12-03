@@ -26,7 +26,18 @@ export default class TodoForm extends Component {
 
     handleClick = () => {
         this.props.deleteTodo();
+
     }
+
+    handleClicktoSave = () => {
+        this.props.saveData();
+       
+    }
+    handleClicktoRetrieve = () => {
+        this.props.getData();
+       
+    }
+
     render() {
         return (
             <div>
@@ -35,7 +46,8 @@ export default class TodoForm extends Component {
                     <div>
                         <button className="add" type='submit'>Add todo</button>
                         <button className="clear" onClick = {this.handleClick}>Clear Completed</button>
-                        
+                        <button className="save" onClick = {this.handleClicktoSave}>Save my todos</button>
+                        <button className="retrieve" onClick = {this.handleClicktoRetrieve}>Get my todos</button>
                     </div>
                 </form>
             </div>

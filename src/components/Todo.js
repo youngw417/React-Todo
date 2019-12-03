@@ -1,10 +1,14 @@
 import React from 'react'
 
-function Todo({todo, todoCompleted}) {
-
+function Todo({todo, completedItems}) {
+    
     const handleClick = ()=> {
-        todoCompleted(todo);
+        completedItems(todo);
+    
+       
+
     }
+    
     return (
         <div>
           <p onClick = {handleClick} className ={todo.completed && 'completed' }>
